@@ -1,0 +1,22 @@
+{
+  "name": "nodetwitchbot",
+  "version": "1.0.0",
+  "description": "This is a twitch bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeSphx/NodeTwitchBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikeSphx/NodeTwitchBot/issues"
+  },
+  "homepage": "https://github.com/MikeSphx/NodeTwitchBot#readme",
+  "dependencies": {
+    "tmi.js": "^1.2.1"
+  }
+}
