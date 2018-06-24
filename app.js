@@ -13,17 +13,16 @@ var options = {
         username: "C00LD0GS",
         password: apikey.key
     },
-    channels: ["i_st", "mrpandamania"]
+    channels: ["d_o_g_s_", "mrpandamania"]
 };
 
 var client = new tmi.client(options);
 client.connect();
 
 client.on('connected', function(address, port) {
-    client.action("mrpandamania", "Hello I'm a good bot! :)");
-    client.action("i_st", "Hello I'm a good bot! :)");
+    client.action("d_o_g_s_", "Hello I'm a good bot! :)");
 });
 
 client.on('chat', function(channel, user, message, self) {
-    client.action("i_st", user['display-name'] + " you are a total noob bro.");
+    client.action(" d_o_g_s_", user['display-name'] + " you are a total noob bro.");
 });
