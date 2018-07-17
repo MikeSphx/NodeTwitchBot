@@ -4,6 +4,7 @@
   "description": "This is a twitch bot",
   "main": "app.js",
   "scripts": {
+    "start": "serve ./public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/MikeSphx/NodeTwitchBot#readme",
   "dependencies": {
+    "express": "^4.16.3",
+    "serve": "^9.1.0",
+    "socket.io": "^2.1.1",
     "tmi.js": "^1.2.1"
   }
 }
