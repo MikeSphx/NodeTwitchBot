@@ -13,12 +13,46 @@ export default function parse(msg) {
                 };
                 cmd1 = commandList[1];
                 cmd2 = commandList.length > 2 && !isNaN(parseInt(commandList[2])) ? parseInt(commandList[2]) : 1;
+                let steps = cmd2
+                let frame = 0
+                walking = true;
                 switch(cmd1) {
                     case 'left':
                         console.log('moving left ' + cmd2.toString() + ' steps');
+                        setInterval(function() {
+                            frame = (frame + 1) % 10;
+                            steps = steps - 1;
+                            if (steps < 0) {
+                                window.walking = false;
+                                return;
+                            };
+                            let url = 'https://maplestory.io/api/GMS/latest/pet/5000207/move/' + frame + '/';
+                            let img = new Image();
+                            img.src = url;
+                            img.addEventListener('load', function() {
+                                let corgo = document.getElementById('corgo');
+                                corgo.src = url
+                            });
+                        }, 1000);
                         break;
                     case 'right':
                         console.log('moving right ' + cmd2.toString() + ' steps');
+                        setInterval(function() {
+                            frame = (frame + 1) % 10;
+                            steps = steps - 1;
+                            if (steps < 0) {
+                                window.walking = false;
+                                return;
+                            };
+                            let url = 'https://maplestory.io/api/GMS/latest/pet/5000207/move/' + frame + '/';
+                            let img = new Image();
+                            img.src = url;
+                            img.addEventListener('load', function() {
+                                let corgo = document.getElementById('corgo');
+                                corgo.src = url;
+                                corgo.style.transform = 'rotatey(180deg)';
+                            });
+                        }, 1000);
                         break;
                 };
                 break;
